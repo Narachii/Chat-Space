@@ -5,7 +5,6 @@
 |Column| Type |Options|
 |:----:|:----:|:-----:|
 |name|string|index :true, null false, unique true|
-|email|string|index :true,null false, unique true|
 
 ### Associaton
  - has_many :groups, through :members
@@ -32,7 +31,7 @@
 |user_id |integer|null false,foreign_key :true|
 
 ### Association
- - belongs_to : group
+ - belongs_to :group
  - belongs_to :user
 
 ## messages
