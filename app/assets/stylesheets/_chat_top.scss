@@ -1,10 +1,10 @@
-.contents__chat__top{
+.chat__top{
       height: 100px;
       border-bottom: thin solid #eeeeee;
       padding-left: 40px;
       position: relative;
       width:calc(100vw - 300px - 40px);
-      &__title{
+      .title{
         font-size: 20px;
         padding: 35px 0 10px 0;
         font-color: #333333;

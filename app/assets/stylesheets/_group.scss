@@ -4,7 +4,7 @@
     float:left;
     padding-right: -40px;
 
-      &__top{
+      .group__top{
       width: 280px;
       background-color:#253141;
       height:100px;
@@ -15,7 +15,7 @@
       color:#FFFFFF;
       }
 
-      &__bottom{
+      .group__bottom{
         height:calc(100vh - 100px - 30px);
         background-color:#2f3e51;
         min-width: 300px;
@@ -55,5 +55,6 @@
   display: inline-block;
   float: right;
 }
+
 
 

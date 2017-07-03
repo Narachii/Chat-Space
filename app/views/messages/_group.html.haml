@@ -1,12 +1,12 @@
 %div.contents__group
-  %a{href: "http://master.tech-camp.in/"}
+  = link_to root_path do
     %span.i.fa.fa-cog
-  %a{href: "https://github.com/"}
+  =link_to  root_path do
     %span.i.fa.fa-pencil-square-o
-  %div.contents__group__top Top
-  %div.contents__group__bottom
+  %div.group__top Top
+  %div.group__bottom
     %a{href: "localhot:3000/",style: "text-decoration: none"}
-      %div.contents__group__bottom__chank
+      %div.bottom__chank
         %ul.group
           %li.group_name test
           %li.message  まだメッセージはありません
