@@ -1,0 +1,29 @@
+.contents__chat__middle{
+      overflow:scroll;
+      height:calc(100vh - 100px - 90px - 30px);
+      padding-left: 40px;
+        ul.chat{
+        padding-top:46px;
+        padding-bottom: 0;
+        }
+            li.message{
+            font-size: 16px;
+            font-weight: bold;
+            color: #434A54;
+            padding-right: 10px;
+            float:left;
+            }
+            li.data{
+            font-size: 12px;
+            color:#999999;
+            padding-top: 2px;
+            float:left;
+            }
+          .chat{
+            clear:both;
+            padding-top: 10px;
+            font-size: 14px;
+            color:  #434A54;
+            padding-bottom: 40px;
+            }
+      }

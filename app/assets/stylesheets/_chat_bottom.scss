@@ -1,0 +1,42 @@
+.contents__chat__bottom{
+      width:100%;
+      height:90px;
+      background-color: #AAAAAA;
+      padding-right: 40px;
+      &__box{
+      position: relative;
+      }
+    }
+
+
+#text{
+  float:left;
+  width: calc(100vw - 300px - 100px - 150px);
+  padding-right: 40px;
+  height: 50px;
+  position:relative;
+  padding-left: 15px;
+}
+
+
+.wrapper{
+      position: relative;
+      margin-top: 20px;
+      display: inline-block;
+      padding-left: 40px;
+
+}
+#submit{
+  margin-top: 20px;
+
+  height: 50px;
+  width: 100px;
+  background-color:$blue;
+  color:#FFFFFF;
+  border:0;
+  float: right;
+}
+
+.image_upload input{
+    display: none;
+}
