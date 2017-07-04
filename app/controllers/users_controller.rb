@@ -1,13 +1,11 @@
 class UsersController < ApplicationController
 
-
-
   def edit
   end
 
   def update
-     user = User.find(params[:id])
-     user.update(user_params)
+     user = User.find(current_user)
+     user.update(user_params) if user.id == current_user.id
      move_to_index
   end
 
@@ -24,3 +22,10 @@ end
 
 
 end
+
+
+  # def update
+  #    user = User.find(params[:id])
+  #    user.update(name: user_params[:name], email: user_params[:email],id: current_user.id ) if user_id == current_user.id
+  #    move_to_index
+  # end
