@@ -5,8 +5,13 @@ class UsersController < ApplicationController
 
   def update
      user = User.find(current_user)
-     user.update(user_params) if user.id == current_user.id
-     move_to_index
+     if user_params.has_key?(:two)
+      user.update(user_params)
+      move_to_index
+    else
+      redirect_to action: 'edit'
+    end
+
   end
 
  private
