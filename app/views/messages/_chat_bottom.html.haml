@@ -1,0 +1,9 @@
+%div.chat__bottom
+  %form.bottom_box
+    %div.wrapper
+      %input{type: "text",id: "text",name: "message",placeholder: "type a message" }
+      %div.image_upload
+        %label{for: 'file_input'}
+          %i.fa.fa-picture-o
+        %input{type: "file" ,id: "file_input"}
+    %input{type: "submit",id: "submit",value: "Send"}
