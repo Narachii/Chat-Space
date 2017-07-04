@@ -4,15 +4,11 @@ class UsersController < ApplicationController
   end
 
   def update
-     user = User.find(current_user)
-     if user.update(user_params)
-        move_to_index
+     if current_user.update(user_params)
+        redirect_to :root
     else
-      redirect_to action: 'edit'
-
-
+      render "edit.html.haml"
     end
-
   end
 
  private
@@ -23,15 +19,5 @@ class UsersController < ApplicationController
 
   def move_to_index
   redirect_to controller: :messages, action: 'index'
+  end
 end
-
-
-
-end
-
-
-  # def update
-  #    user = User.find(params[:id])
-  #    user.update(name: user_params[:name], email: user_params[:email],id: current_user.id ) if user_id == current_user.id
-  #    move_to_index
-  # end
