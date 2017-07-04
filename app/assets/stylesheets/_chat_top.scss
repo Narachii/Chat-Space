@@ -1,0 +1,38 @@
+.chat__top{
+      height: 100px;
+      border-bottom: thin solid #eeeeee;
+      padding-left: 40px;
+      position: relative;
+      width:calc(100vw - 300px - 40px);
+      .title{
+        font-size: 20px;
+        padding: 35px 0 10px 0;
+        font-color: #333333;
+      }
+      ul.list{
+        font-size:12px;
+        color:#999999;
+        float: left;
+        li.items{
+        float:left;
+        }
+        li.items.name{
+        padding-left: 10px;
+        }
+      }
+    }
+
+
+#edit{
+  position: absolute;
+  top: 28px;
+  right:40px;
+  bottom:0;
+  height:40px;
+  width: 70px;
+  background-color:white;
+  color:$blue;
+  border:2px solid;
+  border-color:#38AEF0;
+
+}
