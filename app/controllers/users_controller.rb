@@ -11,9 +11,14 @@ class UsersController < ApplicationController
     end
   end
 
- private
+  def new
+  end
 
-   def user_params
-    params.require(:user).permit(:name, :email)
-   end
+  def delete
+  end
+
+ private
+  def user_params
+   params.require(:user).permit(:name, :email)
+  end
 end
