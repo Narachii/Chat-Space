@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def new
   end
 
-  def delete
+  def destroy
   end
 
  private

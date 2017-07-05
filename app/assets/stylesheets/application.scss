@@ -1,11 +1,16 @@
 @import "./reset";
 @import "valiable";
-@import "header";
-@import "body";
 @import "font-awesome";
-@import "group";
-@import "chat";
-@import "chat_top";
-@import "chat_middle";
-@import "chat_bottom";
-@import "users/user.scss";
+@import "flash";
+
+
+@import "body";
+  @import "group";
+
+  @import "chat";
+    @import "chat_top";
+    @import "chat_middle";
+    @import "chat_bottom";
+
+  @import "users/user.scss";
+
