@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path,notice: 'グループを作成しました。'
     else
-      render "new"
+      render :new
     end
   end
 
@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
     if @group.update(group_params)
       redirect_to groups_path, notice:'グループを編集しました。'
     else
-      render 'edit'
+      render :edit
     end
   end
 
