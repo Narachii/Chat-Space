@@ -1,4 +1,8 @@
 class GroupsController < ApplicationController
+
+  def index
+  end
+
   def new
     @group = Group.new
   end
@@ -10,6 +14,18 @@ class GroupsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def edit
+    @group = Group.find(params[:id])
+  end
+
+  def update
+    group = Group.find(params[:id])
+    if current_user.id = group.user_ids
+      group.update(group_params)
+    end
+      redirect_to groups_path
   end
 
   private
