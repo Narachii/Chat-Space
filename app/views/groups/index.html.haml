@@ -1,5 +1,5 @@
 %div.contents__group
-  = link_to edit_user_path(id: current_user.id) do
+  = link_to edit_user_path( current_user) do
     %span.i.fa.fa-cog
   =link_to  new_group_path do
     %span.i.fa.fa-pencil-square-o
@@ -8,10 +8,10 @@
       = current_user.name
   %div.group__bottom
     -if user_signed_in?
-      -current_user.groups.each do |g|
-        %a{href: "/groups/#{g.id}/edit",style: "text-decoration: none"}
+      -current_user.groups.each do |group|
+        %a{href: "/groups/#{group.id}/edit",style: "text-decoration: none"}
           %div.bottom__chank
             %ul.group
               %li.group_name
-              = g.name
+              = group.name
               %li.message  まだメッセージはありません
