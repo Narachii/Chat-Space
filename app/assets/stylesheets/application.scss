@@ -1,16 +1,22 @@
 @import "./reset";
+
+//変数の定義ファイル
 @import "valiable";
 @import "font-awesome";
 @import "flash";
 
-
 @import "body";
-  @import "group";
 
-  @import "chat";
-    @import "chat_top";
-    @import "chat_middle";
-    @import "chat_bottom";
+//index group画面
+ @import "group";
 
-  @import "users/user.scss";
+//index chat画面
+@import "chat";
+@import "chat_top";
+@import "chat_middle";
+@import "chat_bottom";
 
+//アカウント編集画面
+@import "users/user.scss";
+//group作成画面
+@import "groups/groups.scss"
