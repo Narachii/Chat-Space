@@ -17,15 +17,16 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
+    @group = set_group
   end
 
   def update
-    group = Group.find(params[:id])
-    if current_user.id = group.user_ids
-      group.update(group_params)
+    @group = set_group
+    if @group.update(group_params)
+      redirect_to groups_path,notice:'グループを編集しました。'
+    else
+      render "edit"
     end
-      redirect_to groups_path
   end
 
   private
@@ -33,4 +34,7 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name,user_ids:[])
   end
 
+  def set_group
+    group = Group.find(params[:id])
+  end
 end
