@@ -1,0 +1,20 @@
+%div.contents__group
+  = link_to "/users/#{current_user.id}/edit" do
+    %span.i.fa.fa-cog
+  =link_to  new_group_path do
+    %span.i.fa.fa-pencil-square-o
+  %div.group__top
+    -if user_signed_in?
+      = current_user.name
+  %div.group__bottom
+    -if user_signed_in?
+      -current_user.groups.each do |g|
+        %a{href: "/groups/#{g.id}/edit",style: "text-decoration: none"}
+          %div.bottom__chank
+            %ul.group
+              %li.group_name
+              = g.name
+              %li.message  まだメッセージはありません
+
+
+  / =link_to  edit_user_path do
