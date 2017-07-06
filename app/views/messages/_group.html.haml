@@ -1,17 +1,17 @@
 %div.contents__group
-  = link_to root_path do
+  = link_to "/users/#{current_user.id}/edit" do
     %span.i.fa.fa-cog
-  =link_to  root_path do
+  =link_to  new_group_path do
     %span.i.fa.fa-pencil-square-o
   %div.group__top
     -if user_signed_in?
       = current_user.name
   %div.group__bottom
-    %a{href: "localhot:3000/",style: "text-decoration: none"}
     -if user_signed_in?
       -current_user.groups.each do |g|
-        %div.bottom__chank
-          %ul.group
-            %li.group_name
-            = g.name
-            %li.message  まだメッセージはありません
+        %a{href: "/groups/#{g.id}/edit",style: "text-decoration: none"}
+          %div.bottom__chank
+            %ul.group
+              %li.group_name
+              = g.name
+              %li.message  まだメッセージはありません
