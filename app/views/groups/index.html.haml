@@ -1,5 +1,5 @@
 %div.contents__group
-  = link_to "/users/#{current_user.id}/edit" do
+  = link_to edit_user_path(id: current_user.id) do
     %span.i.fa.fa-cog
   =link_to  new_group_path do
     %span.i.fa.fa-pencil-square-o
@@ -15,6 +15,3 @@
               %li.group_name
               = g.name
               %li.message  まだメッセージはありません
-
-
-  / =link_to  edit_user_path do

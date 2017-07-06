@@ -1,6 +1,8 @@
 .chat-group-form
   %h1 チャットグループ編集
   = form_for (@group) do |f|
+    -if @group.errors.any?
+      =render "error"
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         .chat-group-form__label
