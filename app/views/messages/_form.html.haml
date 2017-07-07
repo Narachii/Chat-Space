@@ -1,0 +1,8 @@
+= form_for ([@group, @message]) do |f|
+  .wrapper
+    =f.text_field :body,placeholder: "type a message",id: "text"
+    %div.image_upload
+      =f.label :image do
+        %i.fa.fa-picture-o
+      =f.file_field :image
+    = f.submit id: "submit" ,method: :post

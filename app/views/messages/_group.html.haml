@@ -9,7 +9,7 @@
   %div.group__bottom
     -if user_signed_in?
       -current_user.groups.each do |group|
-        %a{href: "/groups/#{group.id}/edit",style: "text-decoration: none"}
+        %a{href: "/groups/#{group.id}/messages",style: "text-decoration: none"}
           %div.bottom__chank
             %ul.group
               %li.group_name
