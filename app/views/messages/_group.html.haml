@@ -13,5 +13,6 @@
           %div.bottom__chank
             %ul.group
               %li.group_name
-              = group.name
-              %li.message  まだメッセージはありません
+                = group.name
+              %li.message
+                = group.show_last_message(group)
