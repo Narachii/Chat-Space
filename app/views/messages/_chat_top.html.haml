@@ -1,9 +1,12 @@
 %div.chat__top
-  %div.title aa
+  %div.title
+    = @group.name
   %ul.list
-    %li.items Members:
-    %li.items.name nao
-    %li.items.name hey
+    %li.items
+      Member:
+      -@group.users.each  do |user|
+        %li.items.name
+          = user.name
   %form.edit
     = link_to  edit_group_path(@group.id) do
       %input{type: "button",id: "edit",value: "Edit"}
