@@ -37,14 +37,6 @@ describe MessagesController,type: :controller do
           messages = group.messages
           expect(assigns(:messages)).to match(messages.sort{|a, b| b.created_at <=> a.created_at })
         end
-
-        it "displays all the messages" do
-          expect(response.body).to include(group.messages[0][:body],group.messages[1][:body],group.messages[2][:body])
-        end
-
-        it "displays all the images" do
-          expect(response.body).to include(group.messages[0][:image],group.messages[1][:image],group.messages[2][:image])
-         end
        end
      end
 
