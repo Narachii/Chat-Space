@@ -18,12 +18,6 @@ FactoryGirl.define do
     email{Faker::Internet.email}
     password "password"
     password_confirmation "password"
-      after(:build) do |group|
-      group.messages << create(:message,id: 4)
-      group.messages << create(:message,id: 2)
-      group.messages << create(:message,id: 3)
-      #groupに配置すると二重に作成されてしまいエラー。　なんでだろ？
-    end
   end
 
     factory :invalid_message ,class: Message do |f|
