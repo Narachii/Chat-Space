@@ -1,12 +1,12 @@
 FactoryGirl.define do
   factory :group do
     id 1
-    name "group1"
+    name {Faker::Internet.name}
   end
 
   factory :message do
-    id               1
-    body             "test test"
+    id               {Faker::Number.digit}
+    body             {Faker::Internet.name}
     group_id         1
     user_id          1
     image Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/image.jpg'))
@@ -14,7 +14,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    name{Faker::Internet.name}
+    name{Faker::Zelda.character}
     email{Faker::Internet.email}
     password "password"
     password_confirmation "password"
