@@ -11,8 +11,6 @@ $(document).on('turbolinks:load',function(){
 
 
   function appendMember(name,id){
-    var name = name
-    var id = id
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${id}' user_id="${id}" user_name="${name}">
                   <input name='group[user_ids][]' type='hidden' value='${id}'>
                   <p class='chat-group-user__name'>${name}</p>
@@ -28,7 +26,7 @@ $(document).on('turbolinks:load',function(){
   $.ajax({
     url: '/users/search',
     type: 'GET',
-    data: ("keyword=" + input ),
+    data: (input),
     processData: false,
     contentType: false,
     dataType: 'json'
@@ -42,13 +40,11 @@ $(document).on('turbolinks:load',function(){
       }
     $('.wrap').on('click',".chat-group-user__btn",function(e){
     $(this).parent().remove();
-    console.log(e.target);
     var name = $(this).attr('data-user-name')
     var id = $(this).attr('data-user-id')
     appendMember(name,id);
     })
     $('#users_wrap').on('click',".chat-group-user__btn",function(e){
-      console.log(this);
     $(this).parent().remove();
     })
     })
