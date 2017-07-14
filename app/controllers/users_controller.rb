@@ -1,11 +1,7 @@
 class UsersController < ApplicationController
 
   def search
-    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    scope
   end
 
   def update
@@ -26,4 +22,13 @@ class UsersController < ApplicationController
   def user_params
    params.require(:user).permit(:name, :email)
   end
+
+  def scope
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
 end
+
