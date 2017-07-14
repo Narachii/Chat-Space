@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
-  def edit
+  def search
+    @users = User.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
+
 
   def update
      if current_user.update(user_params)
@@ -21,4 +27,6 @@ class UsersController < ApplicationController
   def user_params
    params.require(:user).permit(:name, :email)
   end
+
 end
+

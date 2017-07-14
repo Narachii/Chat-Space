@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load',function(){
   function buildHTML(message){
-
     var html = `<div class=chank>
                 <li class=message>${message.user.name}</li>
                 <li class=data>${message.data}</li>
@@ -29,7 +28,7 @@ $(document).on('turbolinks:load',function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.chat-main').append(html)
+      $('.chat__middle_main').append(html)
       $('#submit').attr('disabled',false)
       $('.chat__middle').animate({scrollTop: $('.chat__middle')[0].scrollHeight});
     })
