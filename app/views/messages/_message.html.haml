@@ -1,5 +1,5 @@
 -@messages.each do |message|
-  .chank
+  .chank{ "data-message-id": "#{message.id}"}
     %li.message #{message.user.name}
     %li.data #{message.created_at.strftime('%Y/%m/%d %H:%M')}
     %li.chat #{message.body}
