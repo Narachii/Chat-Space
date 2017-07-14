@@ -1,6 +1,6 @@
 json.id       @message.id
 json.body     @message.body
-json.image    @message.image
+json.image    @message.image.url
 json.group_id @message.group.id
 json.user_id  @message.user.id
 json.data     @message.created_at.strftime('%Y/%m/%d %H:%M')
