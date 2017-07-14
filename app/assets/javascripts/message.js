@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load',function(){
   function buildHTML(message){
-    var html = `<div class=chank>
+    var html = `<div class=chank data-message-id="${message.id}">
                 <li class=message>${message.user.name}</li>
                 <li class=data>${message.data}</li>
                 <li class=chat>${message.body}</li>
@@ -11,9 +11,9 @@ $(document).on('turbolinks:load',function(){
     var html = html + image
     return html;
     };
-
     return html;
   }
+
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -28,7 +28,7 @@ $(document).on('turbolinks:load',function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.chat__middle_main').append(html)
+      $('.chats').append(html)
       $('#submit').attr('disabled',false)
       $('.chat__middle').animate({scrollTop: $('.chat__middle')[0].scrollHeight});
     })
