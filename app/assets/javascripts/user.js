@@ -26,7 +26,7 @@ $(document).on('turbolinks:load',function(){
   $.ajax({
     url: '/users/search',
     type: 'GET',
-    data: (input),
+    data: ("keyword=" + input),
     processData: false,
     contentType: false,
     dataType: 'json'
@@ -53,3 +53,4 @@ $(document).on('turbolinks:load',function(){
     });
   });
 });
+

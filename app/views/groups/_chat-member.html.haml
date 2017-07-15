@@ -1,0 +1,11 @@
+-@group.users.each do |user|
+  .chat-group-user.clearfix.js-chat-member{:id => "chat-group-user-#{user.id}", :user_id => "#{user.id}", :user_name => "#{user.name}"}
+    %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{user.id}"}
+    %p.chat-group-user__name
+      =user.name
+    %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+-if @user.present?
+  .chat-group-user.clearfix.js-chat-member{:id => "chat-group-user-#{current_user.id}", :user_id => "#{current_user.id}", :user_name => "#{current_user.name}"}
+    %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{current_user.id}"}
+    %p.chat-group-user__name
+      =current_user.name

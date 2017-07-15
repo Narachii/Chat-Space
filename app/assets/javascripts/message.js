@@ -53,8 +53,6 @@ $(document).on('turbolinks:load',function(){
         dataType: 'json'
       })
       .always(function(data){
-        console.log(message_id)
-        console.log(data)
         $.each(data, function(i,data){
           var html = buildHTML(data);
           $('.chats').append(html);
